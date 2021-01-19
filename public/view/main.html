@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연습 Starbucks Coffee Company</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+li > a {
+    color: rgba(0, 140, 60, 1);
+    font-weight: 600;
+    font-size : 0.8rem;
+}
+* {
+ 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ 	font-color: black; 
+}
+.navbar-brand {			/* 상단 메뉴 */
+	height: 30%
+	position: fixed;
+	margin:  4px 30px 0 120px; 
+}
+.sb_logo {				/* 상단 로고 */
+	width: 50px;
+	height: auto;
+} 
+.r_nav {				/* 상단 우측 정렬메뉴 */
+	position: absolute;
+	right : 10%;
+	padding: 4px;
+}
+.signin_btn {			/* 상단 우측 로그아웃버튼 */
+	background-color: rgba(0, 140, 60, 1);
+	color: white;
+	width: 65px;
+	height: 30px;
+	margin: 4px 8px 0 4px;
+	border: 1px rgba(0, 140, 60, 1);
+	border-radius: 20px;
+	text-align: center;
+	font-size: 0.8rem;
+}
+.signin_btn:hover {		/* 상단 우측 로그아웃버튼 마우스오버 */
+    background-color: rgba(0, 140, 60, 0.93);
+     color: white;
+}
+.join_btn {				/* 상단 우측 회원가입버튼 */
+	background-color: rgba(0, 140, 60, 1);
+	color: white;
+	width: 80px;
+	height: 30px;
+	padding: 0;
+	margin: 4px 4px;
+	border: 1px rgba(0, 140, 60, 1);
+	border-radius: 20px;
+	text-align: center;
+	font-size: 0.8rem;
+}
+.join_btn:hover {		/* 상단 우측 회원가입버튼 마우스오버 */
+    background-color: rgba(0, 140, 60, 0.93);
+     color: white;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 992px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1440px;
+  }
+}
+.container-fluid {		/* 메인 컨테이너 */ 
+	margin-right: auto; 
+	margin-left: auto; 
+	width:75%;
+	text-align: center;
+	font-size: 1.3rem;
+	position: relative;
+	background-color: rgba(206, 223, 255, 0.85);
+}
+.top {					/* 메인 섹션 0 영역 */
+	display: flex;
+	flex-wrap: wrap;
+	flex: 30%;
+  	background-color: rgba(206, 223, 255, 0.85);
+  	padding: 50px 20px;
+}
+.col-lg-6 {				/* 메인 섹션 1,2,3을 각각 반가르기 */
+	padding: 0;
+}
+.col-lg-6 > p {			/* 메인 섹션 1,2,3의 <p>태그 */
+	position: absolute;
+}
+.hc { width:100%; left:0; right:0; margin-left:auto; margin-right:auto; } /* 가로 중앙 정렬 */ 
+.vc { height:45%; top: 0; bottom:0; margin-top:auto; margin-bottom:auto; } /* 세로 중앙 정렬 */
+.col-lg-6 > img {		/* 메인 섹션 1,2,3의 이미지 */
+	width: 100%;
+	height: 100%;
+}
+.footer {				/* 풋터  */
+	position: absolute;
+	left: 11%;	
+	padding: 0.5rem;
+	letter-spacing: 0.5px;
+}
+div > a {				
+	color: black;
+	font-size : 1rem;
+}
+</style>
+</head>
+<body>
+<!-- 상단메뉴 -->
+<nav class="navbar navbar-expand-lg">
+  <!-- 로고이미지 -->
+	<a class="navbar-brand" href="Main.jsp">
+		<img class="sb_logo" src="../images/sb_logo.png" alt="logo_image">
+	</a> 
+  <!-- 메뉴링크 -->
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<a class="nav-link" href="#">MENU</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="login.jsp">MY STARBUCKS</a>
+		</li>
+		<li class="nav-item">
+		 	<a class="nav-link" href="#">GIFT CARDS</a>
+		</li>
+		<!-- 우측 메뉴링크 -->	
+		<form action="login.jsp" method="get">
+			<ul class="navbar-nav r_nav">
+				<li class="nav-item">
+					<a class="nav-link" href="https://www.starbucks.com/store-locator?map=39.635307,-101.337891,5z">
+				   		<img src="../images/icon_LOCATION.png" width="20px" height="20px">
+				   		FIND LOCATION
+				   	</a>
+				</li>
+				<li class="nav-item">
+				 	<input type="submit" value="SIGN IN" class="signin_btn"/>
+				</li>
+				<li>
+					<input type="submit" value="JOIN NOW" class="join_btn"/>
+				</li>
+		  	</ul>
+	  	</form>			  	
+	</ul>
+</nav>
+<hr class="my-0">
+<!-- 메인 섹션00 -->
+<div class="container-fluid top">
+	<div class="col-lg-12">
+		We remain committed to the health and well-being of our partners and customers.
+	</div>
+</div>
+<br>
+
+<!-- 메인 섹션01 -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-6">
+			<p class="hc vc">The new stars of summer<br><br>
+			Say hello to our uniquely refreshing Kiwi Starfruit Starbucks <br>
+			Refreshers® beverage and Star Drink.</p>
+		</div>
+		<div class="col-lg-6">
+			<img src="../images/drinks01.jpg">
+		</div>	
+	</div>
+</div>
+<br>
+<!-- 메인 섹션02 -->
+<div class="container-fluid">	
+	<div class="row">
+		<div class="col-lg-6">
+			<img src="../images/drinks02.jpg">
+		</div>	
+		<div class="col-lg-6">
+			<p class="hc vc">Endless yum<br> <br>
+				Summer on with a Caramel Ribbon Crunch or Mocha Cookie<br>
+				Crumble Frappuccino® blended beverage.
+			</p>
+		</div>
+	</div>
+</div>
+<br>
+<!-- 메인 섹션03 -->
+<div class="container-fluid">
+	<div class="row">	
+		<div class="col-lg-6">
+			<p class="hc vc">Starbucks® Delivers on Uber Eats<br><br>
+				Your favorite food and drinks are on their way<br> 
+				when you order on Uber Eats.**
+			</p>
+		</div>
+		<div class="col-lg-6">
+			<img src="../images/drinks03.jpg">
+		</div>
+	</div>
+</div>
+<br><br><br><br>
+<hr>
+	<div class="footer">
+		<a href="#">Privacy Policy&nbsp;&nbsp;</a><span> | </span>
+		<a href="#">&nbsp;&nbsp;Terms of Use&nbsp;&nbsp;</a><span> | </span>
+		<a href="#">&nbsp;&nbsp;CA Supply Chain Act&nbsp;&nbsp;</a><span> | </span>
+		<a href="#">&nbsp;&nbsp;Submit Your Idea</a>
+    	<p class="pt-3">© 2020 Starbucks Coffee Company. All rights reserved</p>
+    </div>
+<br>
+<br>
+</body>
+</html>
