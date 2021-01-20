@@ -1,6 +1,6 @@
 # Starbucks replica website 
 * Replica of Starbucks website built using HTML, CSS, JavaScript and React.
-* Trying to reproduce the same design features and lay-out to improve design and development skils. 
+* Trying to reproduce the same design features and lay-out to improve design and development skills. 
 * This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
